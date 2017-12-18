@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+    <h1>Add Category</h1>
+    <nav th:replace="fragments :: navigation"></nav>
+    <form method="post" th:object="${category}">
+        <label th:for="name">Category Name:</label>
+        <input type="text" th:field="*{name}"/>
+        <input type="submit" value="Add" />
+        <span th:errors="*{name}" style="color:red;"></span>
+    </form>
+</body>
+</html>

@@ -9,10 +9,9 @@
 
 <form method="post">
 
-    <div th:each="cheese : ${cheeses}" class="checkbox">
+    <div th:each="cheese : ${cheeses}" class="form-group">
         <input type="checkbox" name="cheeseIds" th:value="${cheese.id}" th:id="${cheese.id}"/>
         <label th:for="${cheese.id}" th:text="${cheese.name}"></label>
-        <br />
     </div>
 
     <input type="submit" value="Remove Cheese" />
